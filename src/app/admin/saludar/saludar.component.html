@@ -1,1 +1,30 @@
-<p>saludar works!</p>
+<mat-card class="container mt-5">
+    <div class="nueve-usuario-container">
+        <form [formGroup]="saludoRegistro" #formDirective="ngForm" novalidate>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <mat-form-field>
+                        <mat-label>Nombre</mat-label>
+                        <input matInput placeholder="Nombres" formControlName="nombres" required>
+                        <mat-error *ngIf="hasError('nombres', 'required')">El campo nombre es requerido.</mat-error>
+                        <mat-error *ngIf="hasError('nombres', 'maxlength')">El campo nombre no debe tener mas de 50 caracteres.</mat-error>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="row">
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="containder-button">
+                        <input type="submit" [disabled]='saludoRegistro.invalid' class="mat-flat-button" value="Guardar">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                </div>
+                <div class="col-md-4">
+                </div>
+            </div>
+        </form>
+    </div>
+</mat-card>
