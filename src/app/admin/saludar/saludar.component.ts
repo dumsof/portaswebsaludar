@@ -23,7 +23,7 @@ export class SaludarComponent implements OnInit {
       Validators.required,
       Validators.maxLength(50),
     ]),
-    gender: new FormControl(),
+    gender: new FormControl('',  Validators.required),
   });
 
   idiomas: Idioma[] = [
@@ -52,6 +52,9 @@ export class SaludarComponent implements OnInit {
 
   saludar(boton: any){
 
+    if (this.saludoRegistro.valid) {
+      console.log(this.saludoRegistro.value);
+    }
 
     console.log(boton.srcElement.attributes.id);
   }
