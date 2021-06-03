@@ -37,6 +37,7 @@
                     <button *ngFor="let accion of acciones" [id]="accion.idAccion" (click)="saludar($event)">{{accion.descripcionAccion}}</button>
                 </div>
                 <div class="col-md-4">
+                    {{ mensajeSaludo }}
                 </div>
                 <div class="col-md-4">
                 </div>

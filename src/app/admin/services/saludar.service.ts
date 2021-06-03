@@ -6,7 +6,7 @@ import { map } from 'rxjs/operators';
 
 import { environment } from 'environments/environment';
 
-import { ResponseIdioma, ResponseAccionBoton } from '@/admin/models';
+import { ResponseIdioma, ResponseAccionBoton, ResponseSaludo } from '@/admin/models';
 
 @Injectable({
   providedIn: 'root',
@@ -37,17 +37,19 @@ export class SaludarService {
   }
 
   getSaludo(
+    nombres: string,
     idioma: string,
-    accion: string,
-    nombres: string
-  ): Observable<string> {
+    accion: string
+  ): Observable<ResponseSaludo> {
     const requestGetSaludo = {
       idIdioma: idioma,
       idAccion: accion,
       nombre: nombres,
     };
+
+    console.log(requestGetSaludo);
     return this.http
-      .post<string>(
+      .post<ResponseSaludo>(
         `${environment.apiUrl}/Saludo/ObtenerSaludoIdioma`,
         requestGetSaludo
       )

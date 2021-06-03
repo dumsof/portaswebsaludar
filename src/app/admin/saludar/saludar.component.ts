@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import {
   FormControl,
   FormGroup,
-  FormGroupDirective,
   Validators,
 } from '@angular/forms';
 
@@ -24,19 +23,11 @@ export class SaludarComponent implements OnInit {
     tipoidioma: new FormControl('', Validators.required),
   });
 
-  /* idiomas: Idioma[] = [
-    { idIdioma : '1', descripcionIdioma : 'Español'},
-    { idIdioma : '2', descripcionIdioma : 'Ingles'}
-  ]; */
   idiomas: Idioma[] = [];
 
   acciones: Accion[] = [];
 
-  /*  acciones: Accion[] = [
-    { idAccion : '1', descripcionAccion : 'Saludar'},
-    { idAccion : '2', descripcionAccion : 'Nombre'},
-    { idAccion : '3', descripcionAccion : 'Despedirse'}
-  ]; */
+  mensajeSaludo = '';
 
   constructor(private service: SaludarService) {
     this.getAllIdiomas();
@@ -66,16 +57,17 @@ export class SaludarComponent implements OnInit {
 
   saludar(boton: any) {
     if (this.saludoRegistro.valid) {
-      console.log(this.saludoRegistro.value);
-      console.log(boton.srcElement.attributes.id);
 
-      console.log( this.saludoRegistro.controls['nombres'].value);
-      console.log( this.saludoRegistro.controls['tipoidioma'].value);
+      const nombres = this.saludoRegistro.controls['nombres'].value;
+      const tipoIdioma = this.saludoRegistro.controls['tipoidioma'].value;
+      const accionBoton = boton.srcElement.attributes.id.value;
 
-     this.service.getSaludo(this.saludoRegistro.controls['tipoidioma'].value,boton.srcElement.attributes.id, this.saludoRegistro.controls['nombres'].value)
-     .subscribe((result: string) => {
-      console.log(result);
-      });
+      this.service
+        .getSaludo(nombres, tipoIdioma, accionBoton)
+        .subscribe((result) => {
+          this.mensajeSaludo = result.saludo;
+          console.log(result);
+        });
     }
   }
 }
