@@ -6,7 +6,7 @@ import {
   Validators,
 } from '@angular/forms';
 
-import {Idioma } from '@/admin/models';
+import {Idioma, Accion } from '@/admin/models';
 
 
 @Component({
@@ -29,6 +29,14 @@ export class SaludarComponent implements OnInit {
     { idIdioma : '1', descripcionIdioma : 'Español'},
     { idIdioma : '2', descripcionIdioma : 'Ingles'}
   ];
+
+  acion: Accion[] = [
+    { idAccion : '1', descripcionAccion : 'Saludar'},
+    { idAccion : '2', descripcionAccion : 'Nombre'},
+    { idAccion : '3', descripcionAccion : 'Despedirse'}
+  ];
+
+
   constructor() { }
 
   ngOnInit(): void {

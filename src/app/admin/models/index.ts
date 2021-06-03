@@ -12,4 +12,5 @@ export { Mensaje } from '@/admin/models/mensaje';
 
 /*inicio saludar*/
 export { Idioma } from '@/admin/models/idioma';
+export { Accion } from '@/admin/models/accion';
 
