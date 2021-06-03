@@ -6,6 +6,9 @@ import {
   Validators,
 } from '@angular/forms';
 
+import {Idioma } from '@/admin/models';
+
+
 @Component({
   selector: 'app-saludar',
   templateUrl: './saludar.component.html',
@@ -21,6 +24,11 @@ export class SaludarComponent implements OnInit {
       Validators.maxLength(50),
     ])
   });
+
+  idioma: Idioma[] = [
+    { idIdioma : '1', descripcionIdioma : 'Español'},
+    { idIdioma : '2', descripcionIdioma : 'Ingles'}
+  ];
   constructor() { }
 
   ngOnInit(): void {

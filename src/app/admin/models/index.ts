@@ -10,3 +10,6 @@ export { SubArea } from '@/admin/models/sub-area';
 export { Empleado } from '@/admin/models/empleado';
 export { Mensaje } from '@/admin/models/mensaje';
 
+/*inicio saludar*/
+export { Idioma } from '@/admin/models/idioma';
+
