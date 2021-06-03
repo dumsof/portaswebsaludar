@@ -51,7 +51,9 @@ export class SaludarComponent implements OnInit {
   };
 
   saludar(boton: any){
-    console.log(boton);
+
+
+    console.log(boton.srcElement.attributes.id);
   }
 
 }

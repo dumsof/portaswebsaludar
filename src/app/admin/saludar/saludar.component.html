@@ -19,12 +19,22 @@
                 </div>
             </div>
             <div class="row">
+                <!--  <mat-radio-group aria-label="Select an option">
+                    <mat-radio-button value="1">Option 1</mat-radio-button>
+                    <mat-radio-button value="2">Option 2</mat-radio-button>
+                </mat-radio-group> -->
+                <div *ngFor="let idioma of idiomas">
+
+                    <input type="radio" [value]="idioma.idIdioma" formControlName="gender"> {{idioma.descripcionIdioma}}
+
+
+                </div>
             </div>
             <div class="row">
                 <div class="col-md-4">
-                    <div class="containder-button">
-                        <input type="submit" [disabled]='saludoRegistro.invalid' class="mat-flat-button" value="Guardar">
-                    </div>
+
+                    <!-- <button type="submit" *ngFor="let accion of acciones" [disabled]='saludoRegistro.invalid' [id]="accion.idAccion" class="mat-flat-button" [value]="accion.descripcionAccion"> -->
+                    <button *ngFor="let accion of acciones" [id]="accion.idAccion" (click)="saludar($event)">{{accion.descripcionAccion}}</button>
                 </div>
                 <div class="col-md-4">
                 </div>
