@@ -22,15 +22,16 @@ export class SaludarComponent implements OnInit {
     nombres: new FormControl('', [
       Validators.required,
       Validators.maxLength(50),
-    ])
+    ]),
+    gender: new FormControl(),
   });
 
-  idioma: Idioma[] = [
+  idiomas: Idioma[] = [
     { idIdioma : '1', descripcionIdioma : 'Español'},
     { idIdioma : '2', descripcionIdioma : 'Ingles'}
   ];
 
-  acion: Accion[] = [
+  acciones: Accion[] = [
     { idAccion : '1', descripcionAccion : 'Saludar'},
     { idAccion : '2', descripcionAccion : 'Nombre'},
     { idAccion : '3', descripcionAccion : 'Despedirse'}
@@ -48,5 +49,9 @@ export class SaludarComponent implements OnInit {
     }
     return false;
   };
+
+  saludar(boton: any){
+    console.log(boton);
+  }
 
 }
