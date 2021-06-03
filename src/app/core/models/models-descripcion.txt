@@ -1,0 +1,1 @@
+--son todas las entidades que trabajan sobre la propia aplicación, ejemplo usuarios, clientes, provedores

@@ -1,0 +1,36 @@
+--crear archivo de rutas indicando en que modulo debe trabajar.
+-url con el flujo de rutas:https://angular.io/tutorial/toh-pt5
+
+--generar el archivo de ruta dentro de la raiz module app
+  ng generate module app-routing --flat --module=app
+--generar un routing dentro de la carpeta public y module public
+  ng generate module public/public-routing --flat --module=public
+--poder crear el componente sin carpeta --flat
+  ng g c public/public --flat
+
+
+--se explica como se saca el alias para el path y no estar utilizando ..\ sino @
+url:https://dev.to/larswaechter/path-aliases-with-typescript-in-nodejs-4353
+
+--manejo de rutas en la pagina oficial de //angular.io/tutorial/toh
+https://angular.io/tutorial/toh-pt5
+
+
+--VIDEO ESTRUCTURAR EL PROYECTO Y ROUTING
+https://www.youtube.com/watch?v=5jdexg1rAlE
+
+
+--instalacion material y bootstrap finaliza
+https://www.youtube.com/watch?v=YMTWMh8UXz0
+https://www.youtube.com/watch?v=ery-7ItZTXU
+Antonio Pérez
+
+--cambiar las hojas de style
+https://stackoverflow.com/questions/40726081/angular-cli-from-css-to-scss
+
+
+--desinstalar angular material
+npm uninstal @angular/material
+
+--publicar
+ng build --prod --base-href

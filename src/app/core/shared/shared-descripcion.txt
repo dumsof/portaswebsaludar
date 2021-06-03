@@ -1,0 +1,1 @@
+--la carpeta shared  puede tener por ejemplo los modulos de autentificacion, seria todo lo que se comparte para la aplicacion

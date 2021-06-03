@@ -1,0 +1,2 @@
+--se crean los diferentes bloques que se van a modularizar o pantallas de la aplicacion.
+--EJ: home,

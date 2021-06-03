@@ -1,0 +1,1 @@
+--la carpeta core se utiliza para aquellos componentes que estan conpartidos dentro de la aplicación

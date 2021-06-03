@@ -1,0 +1,3 @@
+--en esta carpeta se alojaran todos los componentes que que se compartiran en toda la aplicación
+--EJE: si se necesita tener una ventana con un mensaje popup para toda la aplicación solo con el
+--boton aceptar.
