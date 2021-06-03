@@ -68,6 +68,14 @@ export class SaludarComponent implements OnInit {
     if (this.saludoRegistro.valid) {
       console.log(this.saludoRegistro.value);
       console.log(boton.srcElement.attributes.id);
+
+      console.log( this.saludoRegistro.controls['nombres'].value);
+      console.log( this.saludoRegistro.controls['tipoidioma'].value);
+
+     this.service.getSaludo(this.saludoRegistro.controls['tipoidioma'].value,boton.srcElement.attributes.id, this.saludoRegistro.controls['nombres'].value)
+     .subscribe((result: string) => {
+      console.log(result);
+      });
     }
   }
 }
