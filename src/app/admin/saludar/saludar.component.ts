@@ -70,4 +70,8 @@ export class SaludarComponent implements OnInit {
         });
     }
   }
+
+  limpiar(){
+    this.mensajeSaludo='';
+  }
 }

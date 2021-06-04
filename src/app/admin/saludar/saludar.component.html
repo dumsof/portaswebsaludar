@@ -19,7 +19,7 @@
             </div>
             <div class="row mt-3">
                 <div *ngFor="let idioma of idiomas" class="col-md-4 col-sm-6 col-12">
-                    <input type="radio" [value]="idioma.idIdioma" formControlName="tipoidioma"> {{idioma.descripcionIdioma}}
+                    <input type="radio" [value]="idioma.idIdioma" (click)="limpiar()" formControlName="tipoidioma"> {{idioma.descripcionIdioma}}
                 </div>
                 <div class="col-md-12">
                     <mat-error *ngIf="hasError('tipoidioma', 'required')">El campo nombre es requerido.</mat-error>
