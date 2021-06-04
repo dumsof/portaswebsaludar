@@ -22,7 +22,7 @@
                     <input type="radio" [value]="idioma.idIdioma" (click)="limpiar()" formControlName="tipoidioma"> {{idioma.descripcionIdioma}}
                 </div>
                 <div class="col-md-12">
-                    <mat-error *ngIf="hasError('tipoidioma', 'required')">El campo nombre es requerido.</mat-error>
+                    <mat-error *ngIf="hasError('tipoidioma', 'required')">El campo idioma es requerido.</mat-error>
                 </div>
             </div>
             <div class="row mt-3">
