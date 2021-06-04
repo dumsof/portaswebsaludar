@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'http://localhost:61828/api'
+  apiUrl: 'https://api-saludar.azurewebsites.net/api'
 };
 
 /*
